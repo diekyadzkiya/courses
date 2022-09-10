@@ -2,21 +2,21 @@
 
 **Definition.** A code $C$ of block length $n$ over an alphabet $\Sigma$ is $C \subseteq \Sigma^n$. The elements $c \in C$ are codewords.
 
-**Example 1.** $C = \\{HELLOWORLD, BRUNCHTIME, ALLTHETIME\\}$ is a code of block length 10 over $\Sigma = \{A,B,\dots,Z\}$. Sometimes, "block length" is replaced by "length".
+**Example 1.** $C = \\{HELLOWORLD, BRUNCHTIME, ALLTHETIME\\}$ is a code of block length 10 over $\Sigma = \\{A,B,\dots,Z\\}$. Sometimes, "block length" is replaced by "length".
 
-**Example 2.** $C = \{(0,0,0,0), (0,0,1,1), (0,1,0,1), (0,1,1,0), (1,0,0,1), (1,0,1,0), (1,1,0,0), (1,1,1,1)\}$ is a code of block length 4 over $\Sigma = \{0, 1\}$. When $\Sigma = \{0, 1\}$ the code is called binary code.
+**Example 2.** $C = \\{(0,0,0,0),(0,0,1,1),(0,1,0,1),(0,1,1,0),(1,0,0,1),(1,0,1,0),(1,1,0,0),(1,1,1,1)\\}$ is a code of block length 4 over $\Sigma = \\{0,1\\}$. When $\Sigma = \\{0,1\\}$ the code is called binary code.
 
 ## Relationship to Alice and Bob
 
 We have a message $x \in \Sigma^k$. Then we encode it to $c \in \Sigma^n$. Something bad happens to it, then we get some corrupted codeword $\tilde c$. Our job is to figure out $x$ given $\tilde c$.
 
-Let us return to Example 2. Consider the encoding map $ENC: \{0,1\}^3 \to \{0,1\}^4$ given by $ENC(x_1,x_2,x_3) = (x_1,x_2,x_3,x_1 + x_2 + x_3 mod 2)$, e.g. $ENC(0,1,1) = (0,1,1,0)$. Notice that $C$ is the image of this encoding map $C = Im(ENC)$. That is, $C$ is the set of all vectors of the form $(x_1,x_2,x_3,x_1+x_2+x_3)$.
+Let us return to Example 2. Consider the encoding map $ENC: \\{0,1\\}^3 \to \\{0,1\\}^4$ given by $ENC(x_1,x_2,x_3) = (x_1,x_2,x_3,x_1 + x_2 + x_3 mod 2)$, e.g. $ENC(0,1,1) = (0,1,1,0)$. Notice that $C$ is the image of this encoding map $C = Im(ENC)$. That is, $C$ is the set of all vectors of the form $(x_1,x_2,x_3,x_1+x_2+x_3)$.
 
-This example can correct one erasure, e.g. $\tilde c = (0,\dots,0,1)$. What was the original codeword? The missing bit must be a "1" because $0 + x_2 + 0 mod 2 = 1$. We can correctly deduce the original message. Erasure means some bit got erased and we do not know the actual value.
+This example can correct one erasure, e.g. $\tilde c = (0,\dots,0,1)$. What was the original codeword? The missing bit must be a "1" because $0 + x_2 + 0 \, mod \, 2 = 1$. We can correctly deduce the original message. Erasure means some bit got erased and we do not know the actual value.
 
 This example can detect one error, e.g. $\tilde c = (0,0,0,1)$. Either everything is fine or one of the bit got flipped? One bit is wrong but we do not know which one. It can not correct the error.
 
-**Example 3.** Consider $ENC: \{0,1\}^4 \to \{0,1\}^7$ given by $ENC(x_1,x_2,x_3,x_4) = (x_1,x_2,x_3,x_4,x_2+x_3+x_4,x_1+x_3+x_4,x_1+x_2+x_4)$, where all operations are mod 2. This is called the Hamming code. Let $C = Im(ENC)$. Notice that $C$ is a binary code of length 7. There is a nice way to visualize it using circles.
+**Example 3.** Consider $ENC: \\{0,1\\}^4 \to \\{0,1\\}^7$ given by $ENC(x_1,x_2,x_3,x_4) = (x_1,x_2,x_3,x_4,x_2+x_3+x_4,x_1+x_3+x_4,x_1+x_2+x_4)$, where all operations are mod 2. This is called the Hamming code. Let $C = Im(ENC)$. Notice that $C$ is a binary code of length 7. There is a nice way to visualize it using circles.
 
 This code can correct one error. We see $\tilde c = (0,1,1,1,0,1,0)$. What is $c$? $c = (0,1,0,1,0,1,0)$. The error is in the third bit, which can be obtained using circle visualization. This seems ad hoc. Does there always a method based on circle drawing solution to this problem?
 
@@ -24,13 +24,13 @@ This code can correct one error. We see $\tilde c = (0,1,1,1,0,1,0)$. What is $c
 
 **Definition.** The Hamming distance between $x,y \in \Sigma^n$ is
 $$
-\Delta(x,y) := \sum_{i=1}^n \mathbb{1}\{x_i \neq y_i\}
+\Delta(x,y) := \sum_{i=1}^n \mathbb{1}\\{x_i \neq y_i\\}
 $$
 The number of positions in which the vector $x$ and $y$ differ. The Hamming distance is a metric (prove it).
 
 **Definition.** The relative Hamming distance between $x,y \in \Sigma^n$ is
 $$
-\delta(x,y) := \frac{\Delta(x,y)}{n} = \frac{1}{n} \sum_{i=1}^n \mathbb{1}\{x_i \neq y_i\}
+\delta(x,y) := \frac{\Delta(x,y)}{n} = \frac{1}{n} \sum_{i=1}^n \mathbb{1}\\{x_i \neq y_i\\}
 $$
 The fraction of positions in which they differ.
 
