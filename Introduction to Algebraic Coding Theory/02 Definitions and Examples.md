@@ -2,7 +2,7 @@
 
 **Definition.** A code $C$ of block length $n$ over an alphabet $\Sigma$ is $C \subseteq \Sigma^n$. The elements $c \in C$ are codewords.
 
-**Example 1.** $C = \text{{HELLOWORLD, BRUNCHTIME, ALLTHETIME}}$ is a code of block length 10 over $\Sigma = \{A,B,\dots,Z\}$. Sometimes, "block length" is replaced by "length".
+**Example 1.** $C = \\{HELLOWORLD, BRUNCHTIME, ALLTHETIME\\}$ is a code of block length 10 over $\Sigma = \{A,B,\dots,Z\}$. Sometimes, "block length" is replaced by "length".
 
 **Example 2.** $C = \{(0,0,0,0), (0,0,1,1), (0,1,0,1), (0,1,1,0), (1,0,0,1), (1,0,1,0), (1,1,0,0), (1,1,1,1)\}$ is a code of block length 4 over $\Sigma = \{0, 1\}$. When $\Sigma = \{0, 1\}$ the code is called binary code.
 
