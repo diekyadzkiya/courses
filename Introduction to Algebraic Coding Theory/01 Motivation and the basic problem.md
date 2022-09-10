@@ -21,9 +21,9 @@ We have a file $x \in \\{0,1\\}^k$. We want to store the file on a storage mediu
 1. Handling something bad
 1. Recovering info about $x$
 1. Minimizing overhead, namely maximize $k/n$
-1. Doing all of this efficiently, for example in the encoding and decoding process
+1. Doing all of this efficiently, for example in the encoding and decoding processes
 
-What is the best tradeoff between 1-4? If we minimize overhead, it would be harder to handle something bad or to recover info about $x$. We have not defined "something bad", "info about $x$" and "efficiently".
+What is the best tradeoff between 1-4? If we minimize the overhead, it would be harder to handle something bad or to recover info about $x$. We have not defined "something bad", "info about $x$" and "efficiently".
 
 ## Reference
 
