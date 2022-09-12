@@ -22,11 +22,8 @@ This code can correct one error. We see $\tilde c = (0,1,1,1,0,1,0)$. What is $c
 
 ## A Few More Definitions
 
-**Definition.** The Hamming distance between $x,y \in \Sigma^n$ is
-$$
-\Delta(x,y) := \sum_{i=1}^n \mathbb{1}\\{x_i \neq y_i\\}
-$$
-The number of positions in which the vector $x$ and $y$ differ. The Hamming distance is a metric (prove it).
+**Definition.** The Hamming distance between $x,y \in \Sigma^n$ is $\Delta(x,y) := \sum_{i=1}^n \mathbb{1}\\{x_i \neq y_i\\}$.
+Namely, the number of positions in which the vector $x$ and $y$ differ. The Hamming distance is a metric (prove it).
 
 **Definition.** The relative Hamming distance between $x,y \in \Sigma^n$ is
 $$
