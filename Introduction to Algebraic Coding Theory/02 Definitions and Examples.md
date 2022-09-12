@@ -12,7 +12,7 @@ We have a message $x \in \Sigma^k$. Then we encode it to $c \in \Sigma^n$. Somet
 
 Let us return to Example 2. Consider the encoding map $ENC: \\{0,1\\}^3 \to \\{0,1\\}^4$ given by $ENC(x_1,x_2,x_3) = (x_1,x_2,x_3,x_1 + x_2 + x_3 \\, mod \\, 2)$, e.g. $ENC(0,1,1) = (0,1,1,0)$. Notice that $C$ is the image of this encoding map $C = Im(ENC)$. That is, $C$ is the set of all vectors of the form $(x_1,x_2,x_3,x_1+x_2+x_3)$.
 
-This example can correct one erasure, e.g. $\tilde c = (0,\dots,0,1)$. What was the original codeword? The missing bit must be a "1" because $0 + x_2 + 0 \, mod \, 2 = 1$. We can correctly deduce the original message. Erasure means some bit got erased and we do not know the actual value.
+This example can correct one erasure, e.g. $\tilde c = (0,\dots,0,1)$. What was the original codeword? The missing bit must be a "1" because $0 + x_2 + 0 \\, mod \\, 2 = 1$. We can correctly deduce the original message. Erasure means some bit got erased and we do not know the actual value.
 
 This example can detect one error, e.g. $\tilde c = (0,0,0,1)$. Either everything is fine or one of the bit got flipped? One bit is wrong but we do not know which one. It can not correct the error.
 
