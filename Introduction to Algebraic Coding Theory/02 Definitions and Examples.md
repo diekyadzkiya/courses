@@ -10,7 +10,7 @@
 
 We have a message $x \in \Sigma^k$. Then we encode it to $c \in \Sigma^n$. Something bad happens to it, then we get some corrupted codeword $\tilde c$. Our job is to figure out $x$ given $\tilde c$.
 
-Let us return to Example 2. Consider the encoding map $ENC: \\{0,1\\}^3 \to \\{0,1\\}^4$ given by $ENC(x_1,x_2,x_3) = (x_1,x_2,x_3,x_1 + x_2 + x_3 mod 2)$, e.g. $ENC(0,1,1) = (0,1,1,0)$. Notice that $C$ is the image of this encoding map $C = Im(ENC)$. That is, $C$ is the set of all vectors of the form $(x_1,x_2,x_3,x_1+x_2+x_3)$.
+Let us return to Example 2. Consider the encoding map $ENC: \\{0,1\\}^3 \to \\{0,1\\}^4$ given by $ENC(x_1,x_2,x_3) = (x_1,x_2,x_3,x_1 + x_2 + x_3 \\, mod \\, 2)$, e.g. $ENC(0,1,1) = (0,1,1,0)$. Notice that $C$ is the image of this encoding map $C = Im(ENC)$. That is, $C$ is the set of all vectors of the form $(x_1,x_2,x_3,x_1+x_2+x_3)$.
 
 This example can correct one erasure, e.g. $\tilde c = (0,\dots,0,1)$. What was the original codeword? The missing bit must be a "1" because $0 + x_2 + 0 \, mod \, 2 = 1$. We can correctly deduce the original message. Erasure means some bit got erased and we do not know the actual value.
 
