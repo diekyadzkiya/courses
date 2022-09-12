@@ -26,16 +26,12 @@ This code can correct one error. We see $\tilde c = (0,1,1,1,0,1,0)$. What is $c
 Namely, the number of positions in which the vector $x$ and $y$ differ. The Hamming distance is a metric (prove it).
 
 **Definition.** The relative Hamming distance between $x,y \in \Sigma^n$ is
-$$
-\delta(x,y) := \frac{\Delta(x,y)}{n} = \frac{1}{n} \sum_{i=1}^n \mathbb{1}\\{x_i \neq y_i\\}
-$$
-The fraction of positions in which they differ.
+$$\delta(x,y) := \frac{\Delta(x,y)}{n} = \frac{1}{n} \sum_{i=1}^n \mathbb{1}\\{x_i \neq y_i\\}.$$
+Namely, the fraction of positions in which they differ.
 
 **Definition.** The minimum distance of a code $C \subseteq \Sigma^n$ is
-$$
-\min_{c \neq c' \in C} \Delta(c,c')
-$$
-The smallest distance between two different codewords. Sometimes called the distance of $C$. We will see that a code with large minimum distance can be used to correct errors.
+$$\min_{c \neq c' \in C} \Delta(c,c')$$
+Namely, the smallest distance between two different codewords. Sometimes called the distance of $C$. We will see that a code with large minimum distance can be used to correct errors.
 
 ## Minimum Distance is a Proxy for Robustness
 
@@ -70,12 +66,10 @@ Requirement 1 and 2 can be combined: we want minimum distance $d$ (correct $d-1$
 
 This definition makes sense. A message $x$ of length $k$ is encoded into a codeword $c \in C$. There are $\Sigma^k$ possible messages and there are $|C|$ possible codewords. Because the number of messages is the same with the number of codewords, thus $|\Sigma|^k = |C|$. Taking logaritms of based $|\Sigma|$ on both sides, yields $k = \log_{|\Sigma|} |C|$, which is the same with the definition.
 
-## The Definitions Keeps on Coming
+## The Definitions Keep on Coming
 
 **Definition.** The rate of a code $C \subseteq \Sigma^n$ is
-$$
-R = \frac{\log_{|\Sigma|} |C|}{n} = \frac{\text{message length } k}{\text{block length } n}
-$$
+$$R = \frac{\log_{|\Sigma|} |C|}{n} = \frac{\text{message length } k}{\text{block length } n}.$$
 So, $R \in [0,1]$. If $R$ is close to one, good, not much overhead. If $R$ is close to 0, bad, lots of overhead.
 
 **Definition.** A code with distance $d$, message length $k$ and block length $n$ over an alphabet $\Sigma$ is called an $(n,k,d)_{|\Sigma|}$ - code.
