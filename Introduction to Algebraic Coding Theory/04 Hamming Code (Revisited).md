@@ -51,3 +51,7 @@ Assuming that "linear algebra works" mod 2.
 - This linear algebraic view is useful!
   - easy to compute the distance of $C$
   - easy to decode $\tilde c$ from 1 error
+
+## Reference
+
+[Lecture 2 Video 1: Hamming Code (Revisited)](https://youtu.be/sLxczkTEjqo)
