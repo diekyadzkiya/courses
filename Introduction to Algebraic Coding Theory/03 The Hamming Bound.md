@@ -49,3 +49,7 @@ $$\frac{k}{n} \leq 1 - \frac{3}{7} = \frac{4}{7}$$
 In Example 3, $\frac{k}{n} = \frac{4}{7}$, so the Hamming bound is tight in this case. Namely, this code achieves the best possible trade off between rate and distance.
 
 **Question to Ponder**. Can you come up with other codes where the Hamming bound is tight? Such codes would be provably optimal, at least in the trade off between rate and distance. In particular, can you generalize Example 3? Can you come up with completely different code?
+
+## Reference
+
+[Lecture 1 Video 3: The Hamming Bound](https://youtu.be/aSLkf0fkir8)
